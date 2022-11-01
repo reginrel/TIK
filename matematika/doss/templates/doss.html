@@ -1,0 +1,51 @@
+{% extends 'buka.html' %}
+{% load static %}
+{% block content %}
+    <center>
+        <h1>Dosen dan Staf Pendidikan Matematika</h1>
+    </center>
+    <h3>Dosen Pendidikan Matematika</h3>
+    <table class="table table-bordered border-primary">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Alamat</th>
+        </tr>
+        {% for dosen in dataDosen %}
+        <tr>
+        <td>{{dosen.nip}}</td>
+        <td>{{dosen.nama}}</td>
+        <td>{{dosen.tanggal_lahir}}</td>
+        <td>{{dosen.foto}}</td>
+        <td>{{dosen.email}}</td>
+        <td>{{dosen.alamat}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h3>Staf Pendidikan Matematika</h3>
+    <table class="table table-bordered border-primary">
+        <tr>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Tanggal Lahir</th>
+            <th>Foto</th>
+            <th>Email</th>
+            <th>Unit</th>
+            <th>Alamat</th>
+        </tr>
+        {%for staf in dataStaf%}
+        <tr>
+            <td>{{staf.nip}}</td>
+            <td>{{staf.nama}}</td>
+            <td>{{staf.tanggal_lahir}}</td>
+            <td>{{staf.foto}}</td>
+            <td>{{staf.email}}</td>
+            <td>{{staf.unit}}</td>
+            <td>{{staf.alamat}}</td>
+        </tr>
+        {% endfor %}
+{% endblock %}
